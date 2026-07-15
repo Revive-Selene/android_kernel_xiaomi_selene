@@ -50,6 +50,15 @@ struct st_susfs_sus_path_list {
 };
 #endif
 
+/* deprecated - stub only */
+#ifdef CONFIG_KSU_SUSFS_TRY_UMOUNT
+struct st_susfs_try_umount {
+	int                                     flags;
+	char                                    target_pathname[SUSFS_MAX_LEN_PATHNAME];
+	int                                     err;
+};
+#endif
+
 /* sus_mount */
 #ifdef CONFIG_KSU_SUSFS_SUS_MOUNT
 struct st_susfs_hide_sus_mnts_for_non_su_procs {
