@@ -252,6 +252,11 @@ out_copy_to_user:
 		info.err = -EFAULT;
 	}
 }
+
+/* called from ksu_handle_setresuid - deprecated stub */
+void susfs_try_umount(uid_t uid) {
+	/* deprecated, no-op */
+}
 #endif
 
 /* sus_mount */
